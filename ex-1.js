@@ -1,7 +1,15 @@
 // Exercise 1: Length of Last Word
 
 const lengthOfLastWord = function (s) {
-  //Start coding here
+  const splitWords = s.split(" ");
+  const newSplitWords = [];
+  for (let i = 0; i < splitWords.length; i++) {
+    if (splitWords[i] !== "") {
+      newSplitWords.push(splitWords[i]);
+    }
+  }
+  let lastWord = newSplitWords[newSplitWords.length - 1];
+  return lastWord.length;
 };
 
 const result1 = lengthOfLastWord("Hello World");
